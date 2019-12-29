@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+  
+<html> 
+<head> 
+    <title>Chatbot</title> 
+</head> 
+<body> 
+  
+<ul> 
+<!-- For loop logic of jinja template -->
+{%for i in range(0, text_history|length)%} 
+    <li>{{text_history[i]}}</li> 
+{%endfor%} 
+  
+</ul> 
+  
+<form action="/chat" method="get">
+  input: <input type="text" name="text"><br>
+  <input type="submit" value="Submit">
+</form>
+
+</body> 
+</html> 
